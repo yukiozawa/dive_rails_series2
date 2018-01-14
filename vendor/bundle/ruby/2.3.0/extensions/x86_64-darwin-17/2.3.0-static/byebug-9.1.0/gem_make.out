@@ -1,0 +1,20 @@
+current directory: /Users/yukiozawa/projects/dive_rails_series2/vendor/bundle/ruby/2.3.0/gems/byebug-9.1.0/ext/byebug
+/Users/yukiozawa/.rbenv/versions/2.3.3/bin/ruby -r ./siteconf20180114-96975-me3abr.rb extconf.rb
+Ignoring ffi-1.9.18 because its extensions are not built.  Try: gem pristine ffi --version 1.9.18
+creating Makefile
+
+current directory: /Users/yukiozawa/projects/dive_rails_series2/vendor/bundle/ruby/2.3.0/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/yukiozawa/projects/dive_rails_series2/vendor/bundle/ruby/2.3.0/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/yukiozawa/projects/dive_rails_series2/vendor/bundle/ruby/2.3.0/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20180114-96975-1g5qd0z/byebug

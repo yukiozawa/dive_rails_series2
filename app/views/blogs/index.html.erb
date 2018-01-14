@@ -1,22 +1,22 @@
-<h1>ブログ一覧</h1>
+<h1>Listing Blogs</h1>
 
-<%= link_to "ブログ投稿", new_blog_path, method: :GET %>
+<div class="container">
+  <div id="new-blog-link">
+    <%= link_to '新規ブログを作成する', new_blog_path %>
+  </div>
 
-<p><%= notice %></p>
-
-<table>
-  <tr>
-    <th>タイトル</th>
-    <th>内容</th></th>
-  </tr>
-  
-<% @blogs.each do |b| %>
-    <tr>
-        <td><%= b.title %></td>
-        <td><%= b.content %></td>
-        <td><%= link_to "編集", edit_blog_path(b.id), method: :GET %></td>
-        <td><%= link_to "削除", blog_path(b.id), method: :DELETE %></td>
-    </tr>
-<% end %>
-
-</table>
+  <div class="row">
+    <% @blogs.each do |blog| %>
+      <div class="col-xs-12 col-md-6 blog-panel">
+        <h2><%= blog.title %></h2>
+        <p><%= blog.content %></p>
+        <p><%= blog.created_at %></p>
+        <div class="blog-links">
+          <%= link_to 'Show', blog, class: 'btn btn-default' %>
+          <%= link_to 'Edit', edit_blog_path(blog), class: 'btn btn-info' %> |
+          <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

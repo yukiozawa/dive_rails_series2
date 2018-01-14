@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root 'tops#index'
-  
+
   get 'tops/index'
-  
+  get 'webpages/index'
+
   resources :blogs do
     collection do
       post :confirm
