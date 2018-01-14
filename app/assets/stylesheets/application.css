@@ -108,3 +108,19 @@
 .text-center{
   margin: 0 auto;
 }
+
+
+.form-area{
+  width: 400px;
+  margin: 0 auto;
+}
+
+.form-width input{
+  width: 100%;
+  max-width: 80%
+}
+
+.btn-margin{
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
