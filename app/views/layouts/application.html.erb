@@ -12,6 +12,10 @@
   <body>
     <%= render partial: "common/header" %>
 
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, class: "#{key}") %>
+      <% end %>
+
       <%= yield %>
 
     <%= render partial: "common/footer" %>

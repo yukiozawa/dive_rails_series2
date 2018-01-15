@@ -15,6 +15,13 @@
         <li><%= link_to "投稿一覧", blogs_path, method: :get %></li>
         <li><%= link_to "新規投稿", new_blog_path, method: :get %></li>
         <li><%= link_to "webpage_index", webpages_index_path, method: :get %></li>
+        <% unless logged_in? %>
+        <li><%= link_to "Log in", new_session_path, method: :get %></li>
+        <li><%= link_to "Sign up", new_user_path, method: :get %></li>
+        <% end %>
+        <% if logged_in? %>
+        <li><%= link_to "Logout", session_path(current_user.id), method: :delete %></li>
+        <% end %>
       </ul>
     </div>
   </div>
