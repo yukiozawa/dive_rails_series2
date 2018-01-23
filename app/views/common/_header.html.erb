@@ -15,6 +15,7 @@
         <li><%= link_to "投稿一覧", blogs_path, method: :get %></li>
         <li><%= link_to "新規投稿", new_blog_path, method: :get %></li>
         <li><%= link_to "webpage_index", webpages_index_path, method: :get %></li>
+        <li><%= link_to "お気に入り一覧", favorites_path, method: :get %></li>
         <% unless logged_in? %>
         <li><%= link_to "Log in", new_session_path, method: :get %></li>
         <li><%= link_to "Sign up", new_user_path, method: :get %></li>

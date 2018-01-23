@@ -16,13 +16,14 @@ class BlogsController < ApplicationController
 
     def create
         @blog = Blog.new(blog_params)
-        @blog.user_id = current_user.id
+        # @blog.user_id = current_user.id
 
         if @blog.save
         # 一覧画面へ遷移して"ブログを作成しました！"とメッセージを表示します。
             redirect_to blogs_path, notice: "ブログを作成しました！"
 
         else
+
         # 入力フォームを再描画します。
             render 'new'
         end
@@ -34,6 +35,7 @@ class BlogsController < ApplicationController
     end
 
     def show
+        # binding.pry
         @favorite = current_user.favorites.find_by(blog_id: @blog.id)
     end
 
@@ -52,7 +54,9 @@ class BlogsController < ApplicationController
     end
 
     def confirm
+        # binding.pry
         @blog = Blog.new(blog_params)
+        # @blog.user_id = current_user.id
         render :new if @blog.invalid?
     end
 
@@ -64,7 +68,7 @@ class BlogsController < ApplicationController
 
     private
     def blog_params
-        params.require(:blog).permit(:title, :content)
+        params.require(:blog).permit(:title, :content).merge(user_id: current_user.id)
     end
 
     def set_blog
