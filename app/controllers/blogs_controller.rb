@@ -20,6 +20,7 @@ class BlogsController < ApplicationController
 
         if @blog.save
         # 一覧画面へ遷移して"ブログを作成しました！"とメッセージを表示します。
+            BlogPostMailer.blog_post(@blog).deliver
             redirect_to blogs_path, notice: "ブログを作成しました！"
 
         else
