@@ -1,5 +1,5 @@
 class BlogPostMailer < ApplicationMailer
-  def blog_post(blog)
+  def blog_post_mail(blog)
     @blog = blog
     @user_email = @blog.user.email
     # binding.pry
