@@ -47,7 +47,7 @@ class BlogsController < ApplicationController
     end
 
     def update
-        binding.pry
+        # binding.pry
         @blog = Blog.find(params[:id])
         if @blog.update(blog_params)
             redirect_to blogs_path, notice: "ブログを編集しました！"
