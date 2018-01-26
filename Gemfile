@@ -60,3 +60,5 @@ gem 'binding_of_caller'
 
 gem 'bcrypt', '3.1.11'
 gem 'faker'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'

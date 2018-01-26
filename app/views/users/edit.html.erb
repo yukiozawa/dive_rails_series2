@@ -1,0 +1,10 @@
+
+<%= form_with(model: @user, local: true) do |f| %>
+  <p><%= f.label :name %></p>
+  <p><%= f.text_field :name %></p>
+
+  <p><%= f.label :image %></p>
+  <p class="text-center"><%= f.file_field :image %></p>
+
+  <p><%= f.submit "編集", class: "btn btn-success" %></p>
+<% end %>

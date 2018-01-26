@@ -69,7 +69,7 @@ class BlogsController < ApplicationController
 
     private
     def blog_params
-        params.require(:blog).permit(:title, :content).merge(user_id: current_user.id)
+        params.require(:blog).permit(:title, :content, :image).merge(user_id: current_user.id)
     end
 
     def set_blog

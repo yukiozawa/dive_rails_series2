@@ -109,6 +109,10 @@
   margin: 0 auto;
 }
 
+.text-center input{
+  margin: 0 auto;
+}
+
 
 .form-area{
   width: 400px;
@@ -123,4 +127,8 @@
 .btn-margin{
   margin-top: 24px;
   margin-bottom: 24px;
+}
+
+.user_form{
+  text-align: center;
 }
