@@ -15,7 +15,7 @@ class BlogsController < ApplicationController
     end
 
     def create
-        binding.pry
+        # binding.pry
         @blog = Blog.new(blog_params)
         # @blog.user_id = current_user.id
 
