@@ -1,6 +1,6 @@
 <div class="form-area">
 
-<%= form_with(model: @blog, local: true ,url: choose_new_or_edit ) do |form| %>
+<%= form_with(model: @blog, local: true ) do |form| %>
 
   <% if @blog.errors.any? %>
     <div id="error_explanation">

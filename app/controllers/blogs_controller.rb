@@ -15,6 +15,7 @@ class BlogsController < ApplicationController
     end
 
     def create
+        binding.pry
         @blog = Blog.new(blog_params)
         # @blog.user_id = current_user.id
 
@@ -46,6 +47,7 @@ class BlogsController < ApplicationController
     end
 
     def update
+        binding.pry
         @blog = Blog.find(params[:id])
         if @blog.update(blog_params)
             redirect_to blogs_path, notice: "ブログを編集しました！"
